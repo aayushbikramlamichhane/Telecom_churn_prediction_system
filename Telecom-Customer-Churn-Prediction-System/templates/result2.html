@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Results</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'result2.css' %}">
+</head>
+<body>
+    <div class="container1">
+        <p class="topic">Churn Estimator Application</p>
+        <h4 class="subtopic">Your Results:</h4>
+        </div>
+    <div class="notifier">
+        <div class="res">Customer No. {{identity}} {{outcome}}<br><br>Tentative probability that the customer might not churn is : <u><i>{{value}}%</i></u></div>
+        
+        <p class="message">
+            Thank him for being a valued customer. Happy customers, happy business. Each customer is unique and valuable, bringing their own needs, wants, and opinions to the table. Happy customers are not only more likely to return and make repeat purchases, but they are also likely to recommend the business to others, spreading the word and bringing in new customers. So maybe you are taking few productive steps in the path of success. Dont just maintain the business of selling goods to the customer, develop a business of serving the customer.<br><br>Want to know your customer better? How about giving him a call or text, or maybe taking his feedbacks about his/her experience? Check the customer's contact details below.
+
+
+        </p>
+
+
+        </div>
+        <p class="contact">
+            CONTACT INFORMATION OF THE CUSTOMER:
+        </p>
+        <table class="t1">
+            <thead>
+              <tr class="t11">
+                <th>Customer Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+                
+              </tr>
+            </thead>
+      
+            <tbody>
+              
+              <tr class="t12">
+                <td>{{cData.id}}</td>
+                <td>{{cData.customer_name}}</td>
+                <td>{{cData.customer_email}}</td>
+                <td>{{cData.customer_address}}</td>
+                <td>{{cData.contact_number}}</td>
+                    
+              </tr>
+              
+            </tbody>
+          </table>
+        <button class="b1"><a href={% url 'predictor' %}>Enter another customer's details</button> 
+        <button class="b2"><a href={% url 'login' %}>Logout</button>
+</body>
+</html>

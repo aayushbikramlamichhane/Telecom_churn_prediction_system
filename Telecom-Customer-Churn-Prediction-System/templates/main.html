@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sample.css' %}">
+
+    
+</head>
+<body>
+    <div class="container1">
+        <p class="topic">Churn Estimator Application</p>
+        <h4 class="subtopic">Please fill in the following customer's details</h4>
+        </div>
+    
+    <div class="container2">
+    <form action="result" name="predictionform">
+        <label for = "id">Customer ID</label><input type="number" placeholder="Enter the Customer's ID" name="id" required><br>
+        
+        <label for="seniorcitizen">Is the Customer a Senior Citizen </label>
+        <select id="seniorcitizen" name="seniorcitizen">
+            <option value="" disabled selected hidden>-- Select an option --</option>
+            <option value=1>Yes</option>
+            <option value=0>No</option></select><br>
+
+        <label for="tenure">Has the customer renewed from Initial Subscription</label>    
+        <select id="tenure" placeholder="Has he/she renewed" name="tenure">
+            <option value="" disabled selected hidden>-- Select an option --</option>
+            <option value=1>Yes</option>
+            <option value=0>No</option></select><br>
+
+        <label for="ps">Is the customer using Phone Service</label>    
+        <select id="ps" name="ps">
+            <option value="" disabled selected hidden>-- Select an option --</option>
+            <option value=1>Yes</option>
+            <option value=0>No</option></select><br>
+
+        <label for="ml">Has he/she taken Multiple Lines</label>    
+        <select id="ml" name="ml">
+            <option value="" disabled selected hidden>-- Select an option --</option>
+            <option value=1>Yes</option>
+            <option value=0>No</option></select><br>
+
+        <label for="inter">Is the customer using Internet service</label>    
+        <select id="inter" name="inter">
+            <option value="" disabled selected hidden>-- Select an option --</option>
+            <option value=2>100 Mbps</option>
+            <option value=1>50 Mbps</option>
+            <option value=0>No</option></select><br>
+
+        <label for="ts">Does the customer has Frequent Complaints or Enquiry in your Tech Support Department</label>    
+        <select id="ts" name="ts">
+            <option value="" disabled selected hidden>-- Select an option --</option>
+            <option value=0>Yes</option>
+            <option value=1>No</option></select><br>
+
+        <label for="tv">Is the customer Streaming TV</label>    
+        <select id="tv" name="tv"  >
+            <option value="" disabled selected hidden>-- Select an option --</option>
+            <option value=1 >Yes</option>
+            <option value=0>No</option></select><br>
+
+        <label for="novie">Is the customer Streaming Movies</label>    
+        <select id="novie" name="novie">
+            <option value="" disabled selected hidden>-- Select an option --</option>
+            <option value=1>Yes</option>
+            <option value=0>No</option></select><br>
+
+        <label for="con">Type of the customer's Contract</label>    
+        <select id="con" name="con">
+            <option value="" disabled selected hidden>-- Select an option --</option>
+            <option value=2>One year</option>
+            <option value=1>6 Months</option>
+            <option value=0>3 Months</option></select><br>
+
+        <label for="mcharge">Customer's Monthly Charge <br><div class="note">Note: This is just a approximate monthly charge and may differ from your company's standard rates. This is just to predict customer behavior based on money so click 'Calculate Monthly Charge' button below.</div></label><input type="number" id="mchar" name="mchar" ><br>
+        <div class="calc"><input type="button" value="Calculate Monthly Charge" onclick="sum()"></div>
+        <br><input type="submit">
+    </form>
+
+    <script type="text/javascript">
+      function sum(){
+        var a,b,c,d,e,res;
+        a=Number(document.predictionform.ps.value);
+        b=Number(document.predictionform.ml.value);
+        c=Number(document.predictionform.inter.value);
+        d=Number(document.predictionform.tv.value);
+        e=Number(document.predictionform.novie.value);
+        res=a*200+b*50+c*475+d*200+e*70;
+        document.predictionform.mchar.value=res;
+      }
+
+    </script>
+    <br>
+    <button type="logout"><a href={% url 'logout' %}>Logout</button>
+
+    </div>   
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}  {% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'homep.css' %}">
+</head>
+
+{% block style%}  {% endblock %}
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Customer Churn <span class="autotype"></span></h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">HOME</a></li>
+                    <li><a href="{% url 'howtouse' %}">HOW TO USE</a></li>
+                    <li><a href="{% url 'signup' %}">USE APP</a></li>
+                    <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                    <li><a href="{% url 'enquiry' %}">ENQUIRY</a></li>
+                </ul>
+            </div></div></div><br><br>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var msg=new Typed(".autotype",{
+            strings:[" Observer"," Estimator"," Minimizer"],
+            typeSpeed:150,
+            backSpeed:150,
+            loop: true
+        })
+
+    </script>
+
+    {% block body%}  {% endblock %}
+ 
+
+    
+</body>
+</html>

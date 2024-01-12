@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Page</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'signuppage.css' %}">
+</head>
+<body>
+  <div class="navbar">
+    <div class="icon">
+        <h2 class="logo">Customer Churn <span class="autotype"></span></h2>
+    </div>
+
+    <div class="menu">
+        <ul>
+          <li><a href="{% url 'home' %}">HOME</a></li>
+          <li><a href="{% url 'howtouse' %}">HOW TO USE</a></li>
+          <li><a href="{% url 'signup' %}">USE APP</a></li>
+          <li><a href="{% url 'about' %}">ABOUT US</a></li>
+          <li><a href="{% url 'enquiry' %}">ENQUIRY</a></li>
+        </ul>
+    </div></div><div>
+     <br><br>
+     
+    {% if messages %}
+      {% for message in messages %}
+        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}
+        <button class="close-button" onclick="this.parentElement.style.display='none';">&times;</button>
+      
+    {% endfor %}
+    </p>
+  {% endif %}  
+    <br><br>
+  <form action=" " method="POST">
+    {% csrf_token %}
+    <label for="username">Name of Your Organization:</label>
+    <input type="text" placeholder="Enter name of your Organization" id="orgname" name="orgname">
+    <br>
+    <label for="username">Branch:</label>
+    <input type="text" placeholder="Enter branch" id="branch" name="branch">
+    <br>
+    <label for="username">Contact Number:</label>
+    <input type="number" placeholder="Enter contact number" id="number" name="number">
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" placeholder="Enter email" id="email" name="email">
+    <br>
+    <label for="username">Username:</label>
+    <input type="text" placeholder="Enter username" id="username" name="username">
+    <br>
+    
+    <label for="password">Password:</label>
+    <input type="password" placeholder="Enter password" id="password" name="password">
+    <br>
+    <label for="confirm_password">Confirm Password:</label>
+    <input type="password" placeholder="Re enter password" id="confirmpassword" name="confirmpassword">
+    <br>
+    <input type="submit" value="Sign Up">
+    <div class="below"><a class="already" href="{% url 'login' %}" >Already have a account</a></div>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var msg=new Typed(".autotype",{
+            strings:[" Observer"," Estimator"," Minimizer"],
+            typeSpeed:150,
+            backSpeed:150,
+            loop: true
+        })
+
+    </script> 
+
+</body>
+</html>

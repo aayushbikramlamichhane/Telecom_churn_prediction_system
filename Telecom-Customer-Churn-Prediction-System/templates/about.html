@@ -1,0 +1,52 @@
+{% extends 'basic.html' %}
+
+{% block title%}About Us{% endblock %}
+
+
+{% block style%}  
+{% load static %}
+<link rel="stylesheet" href="{% static 'about.css' %}">
+{% endblock %}
+
+
+{% block body%} <div class="logo1">ABOUT US </div>
+<div class="text">
+   <p class="textarea">Welcome to our website! We are a team of college students who have come together to create an engaging platform for businesses and organizations to accurately predict and prevent customer churn.
+    <br><br>
+    As a part of our college minor project, We have designed a churn prediction application, which uses advanced algorithms and machine learning techniques to analyze customer data and accurately predict churn. Our software can be customized to meet the specific needs of each business, ensuring that our clients get the most accurate and relevant results possible.
+    <br><br>
+    Thank you for visiting our site, and we look forward to helping you improve your churn prediction capabilities.</p>
+   
+</div>   
+<p class="thank" >OUR TEAM:</p>
+
+   <div class="content">  
+       <div class="container1">
+        <img src="static/images/aayushs.jpg" height="200px"alt="photo">
+        <div class="abc">
+           <p>
+               Aayush Shrestha<br>
+                ACE076BCT006
+           </p>
+       </div>
+       </div> 
+       <div class="container2">
+           <img src="static/images/aayushl.jpg" alt="photo">
+           <div class="abc">
+              <p>
+                  Aayush Bikram Lamichhane<br>
+                  ACE076BCT007
+              </p>
+          </div>
+          </div>
+          <div class="container3">
+           <img src="static/images/ankur.jpg" height="150px" alt="photo">
+           <div class="abc">
+              <p>
+                  Ankur Pokharel<br>
+                    ACE076BCT016
+              </p>
+          </div>
+          </div>
+   
+   </div>   {% endblock %}

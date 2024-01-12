@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'homep.css' %}">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Customer Churn <span class="autotype"></span></h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">HOME</a></li>
+                    <li><a href="{% url 'howtouse' %}">HOW TO USE</a></li>
+                    <li><a href="{% url 'signup' %}">USE APP</a></li>
+                    <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                    <li><a href="{% url 'enquiry' %}">ENQUIRY</a></li>
+                </ul>
+            </div></div><div><br><br>
+    <div class="content">
+    <p class="par">
+        <div class="par1"> DID  YOU  KNOW :</div> <br>
+        <div class="par2" >Customer churn is the percentage of customers who stopped purchasing your business's products or services during a certain period of time. Churn rate in many industries, such as telecommunications and software, is around 15-20%. Understanding and reducing churn can be a critical aspect of customer relationship management and can have a significant impact on your company's bottom line.
+    <br>
+    <br>
+     Our predictive analytics tool <b>(specialized for Telecom Companies which include Phone, Internet, TV and Movies Streaming Services)</b> will help you identify which customers are at risk of leaving
+         and take proactive measures to retain them. </div>
+    
+    <br>
+    <div class="par3">With our service, you'll be able to: </div><br>
+    
+    <div class="par4">
+    1. Monitor customer behavior and identify early warning signs of churn. <br>
+    2. Get a detailed analysis of customer data and gain insight into why customers are leaving.  <br>
+    3. Create targeted retention campaigns to reduce churn and increase customer loyalty.<br>
+    </div>
+    
+        <div class="par5"> 
+            Don't let your business suffer from high churn rates. Sign up for our Churn Prediction Service today and take control of your customer retention strategy. </div>
+    
+    </p>
+    <div class="copyright">Copyright &copy 2023. All rights reserved.</div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var msg=new Typed(".autotype",{
+            strings:[" Observer"," Estimator"," Minimizer"],
+            typeSpeed:150,
+            backSpeed:150,
+            loop: true
+        })
+
+    </script>
+ 
+
+    
+</body>
+</html>

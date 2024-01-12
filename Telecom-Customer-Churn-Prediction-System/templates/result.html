@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Results</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'result.css' %}">
+
+</head>
+<body>
+  
+    <div class="container1">
+        <p class="topic">Churn Estimator Application</p>
+        <h4 class="subtopic">Your Results:</h4>
+        </div>
+    <div class="notifier">
+      
+        <div class="res">Customer No. {{identity}} {{outcome}}<br><br>Tentative probability that the customer might churn is : <u><i>{{value}}%</i></u></div>
+        <div class="poss">POSSIBLE CASES</div>
+    <p>
+        <ul>
+            <li>{{c1}}</li>
+            <li>{{c2}}</li>
+            <li>{{c3}}</li>
+            <li>{{c4}}</li>
+            <li>{{c5}}</li>
+            <li>{{c6}}</li>
+            
+        </ul></div>
+    </p>
+
+    <p class="contact">
+        CONTACT INFORMATION OF THE CUSTOMER:
+    </p>
+
+    <table class="t1">
+        <thead>
+          <tr class="t11">
+            <th>Customer Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            
+          </tr>
+        </thead>
+  
+        <tbody>
+          
+          <tr class="t12">
+            <td>{{cData.id}}</td>
+            <td>{{cData.customer_name}}</td>
+            <td>{{cData.customer_email}}</td>
+            <td>{{cData.customer_address}}</td>
+            <td>{{cData.contact_number}}</td>
+                
+          </tr>
+          
+        </tbody>
+      </table>
+    
+      
+    <button class="b1"><a href={% url 'predictor' %}>Enter another customer's details</button> 
+    <button class="b2"><a href={% url 'login' %}>Logout</button>
+    
+
+
+    
+    
+    
+    
+</body>
+</html>

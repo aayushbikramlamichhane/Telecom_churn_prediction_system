@@ -1,0 +1,116 @@
+.container1{
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    width: 900px;
+    height: 250px;
+    
+    
+}
+.content1{
+    color: white;
+    background-color: #152028;
+    margin-right: 200px;
+    height: 250px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+.part1{
+    color: #ff7200;
+    font-size: 40px;
+    font-weight: bold;
+
+}
+.part2{
+    padding: 10px;
+    position: absolute;
+    margin-right: 200px;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     left: 150px;
+     top: 0px;
+}
+.image1{
+    position: absolute;
+    left: 800px;
+    top: -80px;
+    height: 350px;
+    width: 500px;    
+    border:2px solid wheat;
+    border-radius: 10px;
+}
+.container2{
+    position:absolute;
+    left: 50px;
+    top: 550px;
+    width: 900px;
+    height: 350px; 
+    
+}
+.content2{
+    color: white;
+    background-color: #152028;
+    margin-right: 200px;
+    height: 550px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.part3{
+    color: #ff7200;
+    font-size: 40px;
+    font-weight: bold;
+}
+.part4{
+    padding: 10px;
+    position: absolute;
+    margin-right: 200px;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     left: 150px;
+     top: 0px;
+}
+.image2{
+    position: absolute;
+    left: 800px;
+    top: -20px;
+    height: 650px;
+    width: 500px;    
+    border:2px solid wheat;
+    border-radius: 10px;   
+}
+.container3{
+    margin-top: 50px;
+    position: absolute;
+    left: 50px;
+    top: 1250px;
+    width: 900px;
+    height: 370px; 
+     
+}
+.content3{
+    color: white;
+    background-color: #152028;
+    margin-right: 200px;
+    height: 250px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.part5{
+    color: #ff7200;
+    font-size: 40px;
+    font-weight: bold;
+}
+.part6{
+    padding: 10px;
+    position: absolute;
+    margin-right: 200px;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     left: 150px;
+     top: 0px;
+}
+.image3{
+    position: absolute;
+    left: 800px;
+    top: -20px;
+    height: 300px;
+    width: 500px;    
+    border:2px solid wheat;
+    border-radius: 10px;   
+}
